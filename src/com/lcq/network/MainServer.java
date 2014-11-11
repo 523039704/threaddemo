@@ -21,20 +21,13 @@ public class MainServer {
      */  
     public static void main(String[] args) throws Exception {  
           
-        ServerSocket serverSocket = new ServerSocket(4000);  
+        @SuppressWarnings("resource")
+		ServerSocket serverSocket = new ServerSocket(4000);  
         //调用socket的accept()方法侦听并接受到此套接字的连接，此方法在连接传入之前一直阻塞。   
         while(true){  
-              
             Socket socket = serverSocket.accept();  
-              
             new ServerInputThread(socket).start();  
             new SeverOutputThread(socket).start();  
-              
-              
-              
         }  
-          
-  
     }  
-  
 }  

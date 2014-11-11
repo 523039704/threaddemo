@@ -37,7 +37,7 @@ public class SeverOutputThread extends Thread{
                 OutputStream os = socket.getOutputStream();  
                 BufferedReader br = new BufferedReader(new InputStreamReader(System.in));  
                   
-                String line ="服务输出："+ br.readLine();  
+                String line ="服务员输出："+ br.readLine();  
                 os.write(line.getBytes());  
                   
                   

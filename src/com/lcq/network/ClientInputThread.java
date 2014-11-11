@@ -34,7 +34,7 @@ public class ClientInputThread extends Thread{
                 //将字节数组里的length个字节转换为字符串  
                 String str = new String(by,0,length);  
                 //打印出字符串  
-                System.out.println("客户端输入："+str);  
+                 System.out.println(str);  
                   
                   
                   
