@@ -37,7 +37,6 @@ class SimpleThread extends Thread {
                     this.wait();  
                 } else {  
                     System.out.println(this.getName() + "开始处理");  
-                    sleep(5000);  
                     System.out.println(this.getName() + "结束处理");  
                     setIsRunning(false);  
                     try {  

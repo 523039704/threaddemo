@@ -28,12 +28,13 @@ public class DemoDbcp {
 	/**
 	 * @param args
 	 */
+	@SuppressWarnings("unused")
 	public static void main(String[] args) {
 		
 		DemoDbcp demo = new DemoDbcp();
 		
 		//1. �Զ���pool�ķ�ʽ
-		demo.createThread();
+//		demo.createThread();
 		
 		//2. ʹ��Tomcat�������ӳصķ�ʽ (����Ҫ��web�в�����,��Ϊ��tomcat�Ĺ��������ҾͲ�������)
 		//addUserOfTomcatPool();
@@ -42,7 +43,7 @@ public class DemoDbcp {
 		//addUserOfDBCPPool();
 		
 		//4. ʹ��C3P0���ӳأ��Ƽ����ַ������������ҿ��������������¿�C3P0��DBCP�����
-//		addUserOfC3P0Pool();
+		addUserOfC3P0Pool();
 		
 		//ɾ�Ĳ�Ͳ�д��
 
@@ -66,7 +67,7 @@ public class DemoDbcp {
 			st = conn.prepareStatement(sql);
 			st.setString(1, UUID.randomUUID().toString());
 			st.setString(2, "root");
-			st.setString(3, "123");
+			st.setString(3, "111");
 			st.executeUpdate();
 			Thread.sleep(2000);
 		} catch (SQLException e) {
@@ -104,6 +105,7 @@ public class DemoDbcp {
 		}
 	}
 	
+	@SuppressWarnings("unused")
 	private static void addUserOfDBCPPool(){
 
 		Connection conn = null;
